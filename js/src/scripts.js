@@ -38,7 +38,7 @@ const appendToDOM = (string, index) => {
     executeProblem(index);
   });
 
-  pre.className = `code-block-${index}`;
+  pre.className = `code-block code-block-${index}`;
 
   let displayClass = index ? 'hidden' : ''
   let container = document.createElement('div');
@@ -101,26 +101,32 @@ const parseResponse = ( response, index ) => {
 
 (function init() {
 
+  const hostname = window.location.hostname;
+  let path = '';
+  if ( hostname.includes('github') ) {
+    path = '/ex';
+  }
+
   clearBtn.addEventListener('click', clearResults);
 
   Promise.all( [
-    fetch('/js/src/reverse-words.js'),
-    fetch('/js/src/unique-character.js'),
-    fetch('/js/src/second-minimum.js'),
-    fetch('/js/src/repeating-characters.js'),
-    fetch('/js/src/power-of-ten.js'),
-    fetch('/js/src/minimul-length-subarray-with-sum-higher.js'),
-    fetch('/js/src/insertion-sort.js'),
-    fetch('/js/src/selection-sort.js'),
-    fetch('/js/src/merge-sort.js'),
-    fetch('/js/src/quick-sort.js'),
-    fetch('/js/src/binary-search-tree.js'),
-    fetch('/js/src/best-offers.js'),
-    fetch('/js/src/overlapping-rectangles.js'),
-    fetch('/js/src/column-name-from-number.js'),
-    fetch('/js/src/sum-tree.js'),
-    fetch('/js/src/balanced-tree.js'),
-    fetch('/js/src/sort-stack.js')
+    fetch(`${path}/js/src/reverse-words.js`),
+    fetch(`${path}/js/src/unique-character.js`),
+    fetch(`${path}/js/src/second-minimum.js`),
+    fetch(`${path}/js/src/repeating-characters.js`),
+    fetch(`${path}/js/src/power-of-ten.js`),
+    fetch(`${path}/js/src/minimul-length-subarray-with-sum-higher.js`),
+    fetch(`${path}/js/src/insertion-sort.js`),
+    fetch(`${path}/js/src/selection-sort.js`),
+    fetch(`${path}/js/src/merge-sort.js`),
+    fetch(`${path}/js/src/quick-sort.js`),
+    fetch(`${path}/js/src/binary-search-tree.js`),
+    fetch(`${path}/js/src/best-offers.js`),
+    fetch(`${path}/js/src/overlapping-rectangles.js`),
+    fetch(`${path}/js/src/column-name-from-number.js`),
+    fetch(`${path}/js/src/sum-tree.js`),
+    fetch(`${path}/js/src/balanced-tree.js`),
+    fetch(`${path}/js/src/sort-stack.js`)
   ] )
   .then( ( responses ) => {
     responses.forEach( ( response, index ) => {
