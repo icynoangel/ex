@@ -1,8 +1,12 @@
-# ex
+# Ex
 
 ### run samples
-npm install
-npm start
+ 
+* npm install
+* npm start
 
-### OR
+### or
 run any other web server to deliver index.html
+
+### Live on github
+http://icynoangel.github.io/ex

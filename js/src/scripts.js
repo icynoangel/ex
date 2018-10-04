@@ -29,10 +29,13 @@ const clearResults = () => {
 }
 
 const appendToDOM = (string, index) => {
-  let pre = getPreElement(string);
+  const pre = getPreElement(string);
   // create button
-  let button = document.createElement('button');
-  button.innerHTML = 'Execute';
+  const button = document.createElement('button');
+  const span = document.createElement('span');
+  span.textContent = 'Execute';
+  button.className = 'btn orange';
+  button.appendChild(span);
 
   button.addEventListener('click', () => {
     executeProblem(index);
