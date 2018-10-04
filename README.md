@@ -9,4 +9,4 @@
 run any other web server to deliver index.html
 
 ### Live on github
-http://icynoangel.github.io/ex
+https://icynoangel.github.io/ex
