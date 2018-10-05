@@ -129,7 +129,10 @@ const parseResponse = ( response, index ) => {
     fetch(`${path}/js/src/column-name-from-number.js`),
     fetch(`${path}/js/src/sum-tree.js`),
     fetch(`${path}/js/src/balanced-tree.js`),
-    fetch(`${path}/js/src/sort-stack.js`)
+    fetch(`${path}/js/src/sort-stack.js`),
+    fetch(`${path}/js/src/array-sort-wave.js`),
+    fetch(`${path}/js/src/ugly-numbers.js`),
+    fetch(`${path}/js/src/egg-problem.js`)
   ] )
   .then( ( responses ) => {
     responses.forEach( ( response, index ) => {
