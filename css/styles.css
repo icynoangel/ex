@@ -16,6 +16,7 @@ body {
   justify-content: left;
   margin-right: 0.3rem;
   overflow: auto;
+  z-index: 1;
 }
 
 .result {
@@ -80,6 +81,7 @@ body {
   position: absolute;
   text-decoration: none;
   transition-duration: 0.5s;
+  z-index: 2;
 }
 
 .list-element {
@@ -95,7 +97,7 @@ body {
 
 .nav-opener:hover > .list {
   display: block;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .hidden {
