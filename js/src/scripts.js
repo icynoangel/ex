@@ -134,7 +134,8 @@ const parseResponse = ( response, index ) => {
     fetch(`${path}/js/src/ugly-numbers.js`),
     fetch(`${path}/js/src/egg-problem.js`),
     fetch(`${path}/js/src/merge-strings.js`),
-    fetch(`${path}/js/src/max-staircase.js`)
+    fetch(`${path}/js/src/max-staircase.js`),
+    fetch(`${path}/js/src/min-flips.js`)
   ] )
   .then( ( responses ) => {
     responses.forEach( ( response, index ) => {
