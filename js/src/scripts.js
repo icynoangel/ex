@@ -132,7 +132,8 @@ const parseResponse = ( response, index ) => {
     fetch(`${path}/js/src/sort-stack.js`),
     fetch(`${path}/js/src/array-sort-wave.js`),
     fetch(`${path}/js/src/ugly-numbers.js`),
-    fetch(`${path}/js/src/egg-problem.js`)
+    fetch(`${path}/js/src/egg-problem.js`),
+    fetch(`${path}/js/src/merge-strings.js`)
   ] )
   .then( ( responses ) => {
     responses.forEach( ( response, index ) => {
