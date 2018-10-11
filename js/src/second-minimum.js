@@ -8,13 +8,14 @@
 // []
 
 const secondMinimum = (arr) => {
-  let min = arr[0];
-  let smin = min;
   let l = arr.length;
   
-  if(!l) {
-    return null;
+  if(l < 2) {
+    return 0;
   }
+  
+  let min = arr[0];
+  let smin = arr[1] > min ? arr[1] : min;
   
   for(let i=1; i<l; i++) {
     if (arr[i] < min) {
