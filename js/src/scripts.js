@@ -137,7 +137,9 @@ const parseResponse = ( response, index ) => {
     fetch(`${path}/js/src/max-staircase.js`),
     fetch(`${path}/js/src/min-flips.js`),
     fetch(`${path}/js/src/find-in-matrix.js`),
-    fetch(`${path}/js/src/graph-min-cost-path.js`)
+    fetch(`${path}/js/src/graph-min-cost-path.js`),
+    fetch(`${path}/js/src/power-by-adding.js`),
+    fetch(`${path}/js/src/power-by-multiplying.js`)
   ] )
   .then( ( responses ) => {
     responses.forEach( ( response, index ) => {
