@@ -24,13 +24,17 @@ const power = (nr, n) => {
       currentVal = nr;
       p = nr;
     } else {
-      for(let j=0; j<nr; j++) {
+      for(let j=0; j<Math.abs(nr); j++) {
         p += currentVal;
       }
       currentVal = p;
     }
   }
   
+  if (n % 2 === 0) {
+    p = Math.abs(p);
+  }
+
   return p;
 }
 
